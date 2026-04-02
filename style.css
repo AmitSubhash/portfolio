@@ -110,6 +110,13 @@ body {
   letter-spacing: 0.04em;
   color: rgba(212, 208, 200, 0.30);
   margin-bottom: 20px;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+  cursor: none;
+}
+
+.id-affiliation:hover {
+  color: #990000;
+  text-shadow: 0 0 14px rgba(153, 0, 0, 0.35), 0 0 35px rgba(153, 0, 0, 0.12);
 }
 
 .id-links {
