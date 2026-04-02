@@ -188,7 +188,6 @@ window.addEventListener("resize", () => {
 // ---------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-  initSpikeBg();
   initEditorial();
   initBinauralBeats();
 });

@@ -23,17 +23,6 @@ body {
   color: #e8e4dc;
 }
 
-/* --- EEG background ------------------------------------------------------ */
-
-#spike-bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.15;
-}
-
 /* --- Editorial stage ----------------------------------------------------- */
 
 .editorial-stage {
