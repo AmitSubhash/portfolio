@@ -1,6 +1,6 @@
 # amit-subhash
 
-Interactive neuro-themed profile page. Ghost text from a personal creed flows around a brain outline, illuminated by colored tracers that travel along neural pathways. Built with [@chenglou/pretext](https://github.com/chenglou/pretext) for real-time text measurement and obstacle-aware reflow at 60fps.
+Portfolio. Ghost text from a personal creed flows around a brain outline, illuminated by colored tracers that travel along neural pathways. Built with [@chenglou/pretext](https://github.com/chenglou/pretext) for real-time text measurement and obstacle-aware reflow at 60fps.
 
 **[Live site](https://amitsubhash.github.io/)**
 
