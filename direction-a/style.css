@@ -7,8 +7,8 @@
 html, body { width: 100%; height: 100%; overflow: hidden; }
 
 html {
-  /* Fluid root: scales from 18px (small screens) to 22px (large screens) */
-  font-size: clamp(1.125rem, 0.95rem + 0.5vw, 1.375rem);
+  /* Fluid root: scales from 16px (small screens) to 19.5px (large screens) */
+  font-size: clamp(1rem, 0.88rem + 0.4vw, 1.22rem);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -67,16 +67,18 @@ body {
   gap: 0;
 }
 
-/* Dark halo behind all identity text so ghost text doesn't bleed through */
-.id-name,
-.id-fields,
-.id-affiliation,
-.id-links a {
-  text-shadow:
-    0 0 1rem #08080c,
-    0 0 2rem #08080c,
-    0 0 3.5rem #08080c,
-    0 0 5rem #08080c;
+/* Dark ellipse behind identity -- simple, no per-element text-shadow cost */
+.identity-block::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130%;
+  height: 160%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse, rgba(8, 8, 12, 0.92) 0%, rgba(8, 8, 12, 0.7) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .id-tagline {
@@ -104,16 +106,11 @@ body {
 }
 
 .identity-block:hover .id-name {
-  text-shadow:
-    0 0 1.25rem rgba(210, 195, 150, 0.15),
-    0 0 3rem rgba(210, 195, 150, 0.06),
-    0 0 1rem #08080c, 0 0 3rem #08080c;
+  text-shadow: 0 0 1.25rem rgba(210, 195, 150, 0.15), 0 0 3rem rgba(210, 195, 150, 0.06);
 }
 
 .identity-block:hover .id-fields {
-  text-shadow:
-    0 0 0.75rem rgba(210, 195, 150, 0.2),
-    0 0 1rem #08080c, 0 0 3rem #08080c;
+  text-shadow: 0 0 0.75rem rgba(210, 195, 150, 0.2);
 }
 
 .id-fields {
@@ -135,11 +132,7 @@ body {
 
 .id-affiliation:hover {
   color: #990000;
-  text-shadow:
-    0 0 0.9rem rgba(153, 0, 0, 0.4),
-    0 0 2.2rem rgba(153, 0, 0, 0.15),
-    0 0 1rem #08080c,
-    0 0 3rem #08080c;
+  text-shadow: 0 0 0.9rem rgba(153, 0, 0, 0.4), 0 0 2.2rem rgba(153, 0, 0, 0.15);
 }
 
 .id-links {
@@ -159,10 +152,7 @@ body {
 
 .id-links a:hover {
   color: rgb(210, 195, 150);
-  text-shadow:
-    0 0 0.75rem rgba(210, 195, 150, 0.4),
-    0 0 1.9rem rgba(210, 195, 150, 0.15),
-    0 0 1rem #08080c, 0 0 3rem #08080c;
+  text-shadow: 0 0 0.75rem rgba(210, 195, 150, 0.4), 0 0 1.9rem rgba(210, 195, 150, 0.15);
 }
 
 /* Ensure cursor hidden everywhere (desktop only) */

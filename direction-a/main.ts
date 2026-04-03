@@ -123,7 +123,7 @@ function initBinauralBeats(): void {
       // Master gain -- very quiet, fades in
       const master = ac.createGain();
       master.gain.setValueAtTime(0, ac.currentTime);
-      master.gain.linearRampToValueAtTime(0.035, ac.currentTime + 4);
+      master.gain.linearRampToValueAtTime(0.02, ac.currentTime + 4);
 
       oscL.connect(panL).connect(master).connect(ac.destination);
       oscR.connect(panR).connect(master);
