@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amitsubhash.github.io/sitemap.xml

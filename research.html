@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Amit Subhash</title>
+  <meta name="description" content="Research areas of Amit Subhash: diffuse optical tomography, neonatal brain imaging, Monte Carlo photon transport, differentiable rendering, diffusion priors for inverse problems, domain-randomized segmentation, mechanistic interpretability of biosignal models." />
+  <link rel="canonical" href="https://amitsubhash.github.io/research.html" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="prose-page">
+  <main>
+    <nav>
+      <a href="/">Home</a> ·
+      <a href="/about.html">About</a> ·
+      <a href="/research.html">Research</a> ·
+      <a href="/projects.html">Projects</a> ·
+      <a href="https://github.com/AmitSubhash">GitHub</a>
+    </nav>
+
+    <h1>Research</h1>
+
+    <p>
+      My research lives at the intersection of <strong>biomedical optics</strong>,
+      <strong>inverse problems</strong>, and <strong>modern deep learning</strong>.
+      The unifying goal is making functional neuroimaging usable at the
+      neonatal bedside.
+    </p>
+
+    <h2>Diffuse Optical Tomography for neonates</h2>
+    <p>
+      DOT reconstructs hemodynamic concentration changes (HbO and HbR) from
+      diffuse near-infrared light measurements. The neonatal head is a
+      special case: the skull is thin enough for light to penetrate
+      cortical tissue, but the imaging geometry is small, motion is
+      constant, and the inverse problem is severely ill-posed.
+    </p>
+    <p>
+      My thesis line of work — see
+      <a href="https://github.com/AmitSubhash/piglet-realtime">piglet-realtime</a>
+      — develops a real-time multi-wavelength reconstruction pipeline
+      validated on a piglet neonatal model. Key components include a
+      Q-prior for ill-posed inversion and GCV-based automatic
+      regularization parameter selection.
+    </p>
+
+    <h2>Differentiable photon transport</h2>
+    <p>
+      Classical Monte Carlo photon transport (MCX) treats the forward
+      model as a black box. Differentiable Monte Carlo opens the door to
+      end-to-end DOT optimization — backpropagating through the simulator
+      to learn optode placement, source profiles, or learned
+      regularizers. See
+      <a href="https://github.com/AmitSubhash/diff-photon-transport">diff-photon-transport</a>.
+    </p>
+
+    <h2>Generative priors for inverse problems</h2>
+    <p>
+      Score-based and diffusion models have transformed image priors in
+      MRI and CT reconstruction. I am adapting these approaches to DOT,
+      where the inverse problem is more nonlinear and the data are far
+      sparser. See
+      <a href="https://github.com/AmitSubhash/diffusion-priors-dot">diffusion-priors-dot</a>
+      and
+      <a href="https://github.com/AmitSubhash/dot-test-time-compute">dot-test-time-compute</a>.
+    </p>
+
+    <h2>Contrast-agnostic preclinical segmentation</h2>
+    <p>
+      Reliable DOT requires accurate anatomical priors. Preclinical
+      piglet MRI comes in many contrasts; rather than retraining
+      per-contrast, I use SynthSeg-style domain randomization and
+      Segment Anything (SAM2) to build contrast-agnostic segmenters.
+      See <a href="https://github.com/AmitSubhash/synpig">synpig</a>
+      (Dice 0.9622) and
+      <a href="https://github.com/AmitSubhash/sam-synthseg-piglet">sam-synthseg-piglet</a>.
+    </p>
+
+    <h2>Mechanistic interpretability of biosignal models</h2>
+    <p>
+      Tiny transformers trained on fNIRS and other biosignals are
+      starting to outperform handcrafted features. What features do they
+      learn? <a href="https://github.com/AmitSubhash/biosignal-interp">biosignal-interp</a>
+      trains sparse autoencoders on a small fNIRS transformer to ask
+      whether the latent features map onto anything humans recognize.
+    </p>
+
+    <h2>Open research infrastructure</h2>
+    <p>
+      Most research time is spent on plumbing.
+      <a href="https://github.com/AmitSubhash/iu-hpc-agent">iu-hpc-agent</a>
+      is a verified reference for AI coding agents on the Indiana
+      University Big Red 200 and Quartz HPC clusters.
+      <a href="https://github.com/AmitSubhash/research-os">research-os</a>
+      is an arXiv watcher with a DSPy classifier and Obsidian writer on cron.
+      <a href="https://github.com/AmitSubhash/3brown1blue">3brown1blue</a>
+      is a Manim skill for generating 3Blue1Brown-style explainer videos
+      from papers.
+    </p>
+  </main>
+</body>
+</html>

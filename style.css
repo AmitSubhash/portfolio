@@ -199,3 +199,99 @@ body {
     font-size: 0.65rem;
   }
 }
+
+/* --- SEO prose block on landing page ----------------------------------------
+   Visually hidden but readable by Google, Bing, and LLM crawlers.
+   Uses the standard accessibility "visually-hidden" pattern (NOT display:none,
+   which would also hide from indexers). */
+
+.seo-prose {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Prose pages (/about, /research, /projects) ----------------------------- */
+
+body.prose-page {
+  overflow: auto;
+  cursor: auto !important;
+  background: #08080c;
+  color: #d4d0c8;
+  padding: 3rem 1.5rem 6rem;
+  font-family: "Iowan Old Style", Georgia, "Palatino Linotype", Palatino, serif;
+}
+
+body.prose-page main {
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+body.prose-page nav {
+  font: 500 0.7rem -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(212, 208, 200, 0.45);
+  margin-bottom: 3rem;
+}
+
+body.prose-page nav a {
+  color: rgba(212, 208, 200, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.prose-page nav a:hover {
+  color: rgb(210, 195, 150);
+}
+
+body.prose-page h1 {
+  font: 400 2.4rem "Iowan Old Style", Georgia, serif;
+  letter-spacing: -0.02em;
+  color: #e8e4dc;
+  margin-bottom: 1.5rem;
+}
+
+body.prose-page h2 {
+  font: 400 1.4rem "Iowan Old Style", Georgia, serif;
+  color: #e8e4dc;
+  margin: 2.5rem 0 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+body.prose-page p {
+  margin-bottom: 1.1rem;
+  color: rgba(212, 208, 200, 0.85);
+}
+
+body.prose-page strong {
+  color: #e8e4dc;
+  font-weight: 500;
+}
+
+body.prose-page ul {
+  margin: 0 0 1.4rem 1.4rem;
+  color: rgba(212, 208, 200, 0.85);
+}
+
+body.prose-page li {
+  margin-bottom: 0.5rem;
+}
+
+body.prose-page a {
+  color: rgb(210, 195, 150);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(210, 195, 150, 0.25);
+  transition: border-color 0.3s ease;
+}
+
+body.prose-page a:hover {
+  border-bottom-color: rgb(210, 195, 150);
+}

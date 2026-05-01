@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Amit Subhash</title>
+  <meta name="description" content="About Amit Subhash, incoming PhD student in Neuroengineering at Indiana University. Research in diffuse optical tomography, neonatal brain imaging, Monte Carlo photon transport." />
+  <link rel="canonical" href="https://amitsubhash.github.io/about.html" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="prose-page">
+  <main>
+    <nav>
+      <a href="/">Home</a> ·
+      <a href="/about.html">About</a> ·
+      <a href="/research.html">Research</a> ·
+      <a href="/projects.html">Projects</a> ·
+      <a href="https://github.com/AmitSubhash">GitHub</a>
+    </nav>
+
+    <h1>About</h1>
+
+    <p>
+      I am Amit Subhash, an incoming PhD student in Neuroengineering at
+      Indiana University. I previously completed an MS in Data Science.
+    </p>
+
+    <p>
+      My research focuses on <strong>Diffuse Optical Tomography (DOT)</strong>
+      — a non-ionizing, low-cost neuroimaging modality that uses
+      near-infrared light to reconstruct hemodynamic activity in the brain.
+      DOT is uniquely suited to <strong>neonatal brain imaging</strong>
+      because it is portable, safe at the bedside, and works through the
+      thin neonatal skull.
+    </p>
+
+    <p>
+      The hard problems in DOT are:
+    </p>
+    <ul>
+      <li>
+        the <strong>forward model</strong>: simulating how photons scatter
+        through heterogeneous biological tissue, traditionally via
+        Monte Carlo photon transport (MCX, iso2mesh, NIRFASTer);
+      </li>
+      <li>
+        the <strong>inverse problem</strong>: reconstructing absorption and
+        scattering maps from sparse, noisy boundary measurements — an
+        ill-posed problem that benefits from regularization (Tikhonov,
+        GCV) and modern learned priors (diffusion posterior sampling,
+        score-based generative models);
+      </li>
+      <li>
+        <strong>real-time performance</strong> on commodity hardware so
+        the pipeline can run during clinical care, not after.
+      </li>
+    </ul>
+
+    <h2>Stack</h2>
+    <ul>
+      <li>Python — PyTorch, JAX, NumPy, SciPy, nibabel, MONAI</li>
+      <li>MATLAB — NIRFASTer, NeuroDOT, iso2mesh</li>
+      <li>HPC — Indiana University Big Red 200 (A100), SLURM, CUDA</li>
+      <li>Frontend (side projects) — TypeScript, React, Next.js, Tailwind, Swift</li>
+    </ul>
+
+    <h2>Affiliations</h2>
+    <ul>
+      <li>Indiana University, Neuroengineering (incoming PhD)</li>
+      <li>Indiana University (MS Data Science, prior)</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <ul>
+      <li>GitHub: <a href="https://github.com/AmitSubhash">github.com/AmitSubhash</a></li>
+      <li>Site: <a href="https://amitsubhash.github.io">amitsubhash.github.io</a></li>
+    </ul>
+  </main>
+</body>
+</html>
