@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Amit Subhash</title>
-  <meta name="description" content="About Amit Subhash, incoming PhD student in Neuroengineering at Indiana University. Research in diffuse optical tomography, neonatal brain imaging, Monte Carlo photon transport." />
+  <meta name="description" content="Amit Subhash is an incoming PhD in Neuroengineering at Indiana University. 30+ open-source projects, 600+ commits in the last year, working on diffuse optical tomography and neonatal brain imaging." />
   <link rel="canonical" href="https://amitsubhash.github.io/about.html" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,54 +21,74 @@
     <h1>About</h1>
 
     <p>
-      I am Amit Subhash, an incoming PhD student in Neuroengineering at
-      Indiana University. I previously completed an MS in Data Science.
+      I am Amit Subhash. I build things, constantly. I am an incoming
+      PhD student in Neuroengineering at Indiana University, where I
+      work on <strong>Diffuse Optical Tomography (DOT)</strong> for
+      neonatal brain imaging. I previously completed an MS in Data
+      Science.
     </p>
 
-    <p>
-      My research focuses on <strong>Diffuse Optical Tomography (DOT)</strong>
-      — a non-ionizing, low-cost neuroimaging modality that uses
-      near-infrared light to reconstruct hemodynamic activity in the brain.
-      DOT is uniquely suited to <strong>neonatal brain imaging</strong>
-      because it is portable, safe at the bedside, and works through the
-      thin neonatal skull.
-    </p>
-
-    <p>
-      The hard problems in DOT are:
-    </p>
+    <h2>By the numbers</h2>
     <ul>
-      <li>
-        the <strong>forward model</strong>: simulating how photons scatter
-        through heterogeneous biological tissue, traditionally via
-        Monte Carlo photon transport (MCX, iso2mesh, NIRFASTer);
-      </li>
-      <li>
-        the <strong>inverse problem</strong>: reconstructing absorption and
-        scattering maps from sparse, noisy boundary measurements — an
-        ill-posed problem that benefits from regularization (Tikhonov,
-        GCV) and modern learned priors (diffusion posterior sampling,
-        score-based generative models);
-      </li>
-      <li>
-        <strong>real-time performance</strong> on commodity hardware so
-        the pipeline can run during clinical care, not after.
-      </li>
+      <li><strong>30+</strong> open-source projects under active maintenance</li>
+      <li><strong>600+</strong> commits across public repositories in the last year</li>
+      <li><strong>13+</strong> distinct research and tooling threads pushed forward in parallel</li>
+      <li><strong>Dice 0.9622</strong> on 4-week piglet skull stripping (<a href="https://github.com/AmitSubhash/synpig">synpig</a>)</li>
+      <li>HPC training pipelines on <strong>Indiana University Big Red 200</strong> (4× A100, SLURM)</li>
     </ul>
+
+    <h2>What I work on</h2>
+
+    <p>
+      My research centers on <strong>Diffuse Optical Tomography</strong>
+      — a non-ionizing, low-cost neuroimaging modality that uses
+      near-infrared light to reconstruct hemodynamic activity in the
+      brain. DOT is uniquely suited to neonatal brain imaging: portable,
+      safe at the bedside, and effective through the thin neonatal
+      skull. The hard problems are the <strong>forward model</strong>
+      (Monte Carlo photon transport in heterogeneous tissue), the
+      <strong>inverse problem</strong> (ill-posed reconstruction from
+      sparse boundary measurements), and <strong>real-time
+      performance</strong> on commodity hardware.
+    </p>
+
+    <p>
+      I attack each of these with a different stack. Classical
+      regularization (Tikhonov, GCV) and modern learned priors
+      (diffusion posterior sampling, score-based generative models) for
+      the inverse side. Differentiable Monte Carlo for end-to-end
+      optimization through the forward model. SynthSeg-style domain
+      randomization plus SAM2 for contrast-agnostic anatomical priors.
+      Sparse autoencoders for understanding what tiny biosignal
+      transformers actually learn. And underneath all of it, an opinionated
+      research infrastructure of arXiv watchers, DSPy classifiers, and HPC
+      reference docs that turn a one-person lab into something that
+      ships.
+    </p>
 
     <h2>Stack</h2>
     <ul>
-      <li>Python — PyTorch, JAX, NumPy, SciPy, nibabel, MONAI</li>
-      <li>MATLAB — NIRFASTer, NeuroDOT, iso2mesh</li>
-      <li>HPC — Indiana University Big Red 200 (A100), SLURM, CUDA</li>
-      <li>Frontend (side projects) — TypeScript, React, Next.js, Tailwind, Swift</li>
+      <li><strong>Primary</strong>: Python — PyTorch, JAX, NumPy, SciPy, nibabel, MONAI</li>
+      <li><strong>Biomedical optics</strong>: MCX, NIRFASTer, NeuroDOT, iso2mesh (MATLAB and Python)</li>
+      <li><strong>HPC</strong>: Indiana University Big Red 200 (4× A100, 500 GB RAM), SLURM, CUDA 12.6</li>
+      <li><strong>Frontend / side</strong>: TypeScript, React, Next.js, Tailwind, Swift (macOS)</li>
+      <li><strong>Agentic systems</strong>: Claude Code, DSPy, MIPROv2, ColBERT</li>
     </ul>
 
     <h2>Affiliations</h2>
     <ul>
-      <li>Indiana University, Neuroengineering (incoming PhD)</li>
-      <li>Indiana University (MS Data Science, prior)</li>
+      <li>Indiana University, Neuroengineering — incoming PhD</li>
+      <li>Indiana University — MS Data Science (prior)</li>
     </ul>
+
+    <h2>How I work</h2>
+    <p>
+      I prefer single long sessions. I research and reuse before
+      building net-new — proven implementations beat novelty almost
+      every time. I write conventional commits, run TDD on new code,
+      and review before merging. I push almost every day, because
+      research compounds when the loop is tight.
+    </p>
 
     <h2>Contact</h2>
     <ul>
